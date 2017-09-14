@@ -10,7 +10,7 @@ package assignment_2;
  */
 public class Assignment_2 {
 
-    //--QUESTION 1--
+    //---QUESTION 1---
     public int digitalSum(int n) {
         //if n is negative, make it positive
         if (n < 0) {
@@ -30,7 +30,7 @@ public class Assignment_2 {
         }
     }
 
-    //--QUESTION 2--
+    //---QUESTION 2---
     public int digitalRoot(int n) {
         ////if n is negative, make it positive
         if (n < 0) {
@@ -52,6 +52,17 @@ public class Assignment_2 {
         }
     }
 
+    //---QUESTION 3---
+    public int triangle(int n) {
+        //n represents the number of rows
+        //BASE CASE - if n is 0, return n
+        if (n == 0) {
+            return n;
+        } else {
+            //the number of rows entered = the number of blocks in that row
+        }
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -69,5 +80,11 @@ public class Assignment_2 {
         System.out.println("---QUESTION 2---");
         int digitalRoot = test.digitalRoot(4678);
         System.out.println("Digital Root of 4678 is " + digitalRoot);
+        System.out.println("");
+
+        //Question 3 TEST
+        System.out.println("---QUESTION 3---");
+        int triangle = test.triangle(3);
+        System.out.println("The total blocks in 3 rows is " + triangle);
     }
 }
