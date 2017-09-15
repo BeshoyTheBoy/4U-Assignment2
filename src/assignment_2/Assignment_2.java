@@ -115,7 +115,9 @@ public class Assignment_2 {
 
         //Question 4 TEST
         System.out.println("---QUESTION 4---");
-        int hailstone = test.hailstone(5);
-        System.out.println("Hailstone 5: " + hailstone);
+        System.out.println("Hailstone 12: ");
+        int hailstone = test.hailstone(12);      
+        System.out.println("");
+        
     }
 }
