@@ -25,7 +25,7 @@ public class Assignment_2 {
             int right = n % 10;
             //isolate left digits
             int left = n / 10;
-            //take left digits and isolate right digit, add to previous right digit
+//            //take left digits and isolate right digit, add to previous right digit
             return digitalSum(left) + right;
         }
     }
@@ -59,7 +59,32 @@ public class Assignment_2 {
         if (n == 0) {
             return n;
         } else {
-            //the number of rows entered = the number of blocks in that row
+            //previous row integer
+            int prev = n - 1;
+            //the number of total blocks = the number of blocks in row n plus the blocks in the previous row (n-1)
+            int blocks = n + triangle(prev);
+            //return total blocks
+            return blocks;
+        }
+    }
+
+    //---QUESTION 4---
+    public int hailstone(int n) {
+        //BASE CASE - if n equals 1, the last digit in the sequence
+        if (n == 1) {
+            return 1;
+            //else if n is even (has no remained when divided by 2)
+        } else {
+            if (n % 2 == 0) {
+                //divide n by 2
+                n = n / 2;
+                System.out.println(n);
+            } else {
+                //else if n is odd, multiply by 3 and add 1
+                n = (3 * n) + 1;
+                System.out.println(n);
+            }
+            return hailstone(n);
         }
     }
 
@@ -86,5 +111,11 @@ public class Assignment_2 {
         System.out.println("---QUESTION 3---");
         int triangle = test.triangle(3);
         System.out.println("The total blocks in 3 rows is " + triangle);
+        System.out.println("");
+
+        //Question 4 TEST
+        System.out.println("---QUESTION 4---");
+        int hailstone = test.hailstone(5);
+        System.out.println("Hailstone 5: " + hailstone);
     }
 }
