@@ -88,6 +88,32 @@ public class Assignment_2 {
         }
     }
 
+    //---QUESTION 5---
+    public void binaryConvert(int n) {
+        //keep dividing by 2
+            
+        //BASE CASE
+        //if we get a quotient of 0, and remainder of 1.
+        if (n / 2 == 0 && n % 2 == 1) {
+            System.out.print("1");
+            //else if number is even
+        } else if (n % 2 == 0) {
+            //divide by 2
+            n = n/2;
+            binaryConvert(n);
+            //sout 0
+            System.out.print("0");
+            //Else n is odd
+        } else {
+            //divide by 2
+            n = n/2;
+            binaryConvert(n);
+            //sout 1
+            System.out.print("1");
+        }
+       
+    }
+
     /**
      * @param args the command line arguments
      */
@@ -116,8 +142,14 @@ public class Assignment_2 {
         //Question 4 TEST
         System.out.println("---QUESTION 4---");
         System.out.println("Hailstone 12: ");
-        int hailstone = test.hailstone(12);      
+        int hailstone = test.hailstone(12);
         System.out.println("");
-        
+
+        //Question 5 TEST
+        System.out.println("---QUESTION 5---");
+        System.out.println("Binary Convert of 156: ");
+        test.binaryConvert(156);
+        System.out.println("");
+
     }
 }
