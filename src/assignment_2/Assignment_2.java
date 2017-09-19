@@ -90,8 +90,6 @@ public class Assignment_2 {
 
     //---QUESTION 5---
     public void binaryConvert(int n) {
-        //keep dividing by 2
-            
         //BASE CASE
         //if we get a quotient of 0, and remainder of 1.
         if (n / 2 == 0 && n % 2 == 1) {
@@ -99,19 +97,70 @@ public class Assignment_2 {
             //else if number is even
         } else if (n % 2 == 0) {
             //divide by 2
-            n = n/2;
+            n = n / 2;
             binaryConvert(n);
             //sout 0
             System.out.print("0");
             //Else n is odd
         } else {
             //divide by 2
-            n = n/2;
+            n = n / 2;
             binaryConvert(n);
             //sout 1
             System.out.print("1");
         }
-       
+
+    }
+
+    //---QUESTION 6-
+    //n is number input. b is base
+    public void convert(int n, int b) {
+        //BASE CASE
+        //if the quotient is 0
+        if (n == 0) {
+            return;
+        } else {
+            //keep dividing by the base
+            n = n / b;
+            //remainder
+            int r = n % b;
+            //run through method again
+            convert(n, b);
+
+            //If remainder is single digit sout number
+            if (r < 10) {
+                System.out.print(r);
+            } else {
+                //if r equals 10 print A, if r equals 11 print B etc...
+                if (r == 10) {
+                    System.out.print("A");
+                } else {
+                    if (r == 11) {
+                        System.out.print("B");
+                    } else {
+                        if (r == 12) {
+                            System.out.print("C");
+                        } else {
+                            if (r == 13) {
+                                System.out.print("D");
+                            } else {
+                                if (r == 14) {
+                                    System.out.print("E");
+                                } else {
+                                    if (r == 15) {
+                                        System.out.print("F");
+                                    } else {
+                                        if (r == 16) {
+                                            System.out.print("G");
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     /**
@@ -151,5 +200,10 @@ public class Assignment_2 {
         test.binaryConvert(156);
         System.out.println("");
 
+        //Question 6 TEST
+        System.out.println("---QUESTION 6---");
+        System.out.println("Convert of 1000, base 8:");
+        test.convert(1000, 8);
+        System.out.println("");
     }
 }
