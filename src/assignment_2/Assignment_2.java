@@ -120,13 +120,12 @@ public class Assignment_2 {
         if (n == 0) {
             return;
         } else {
-            //keep dividing by the base
-            n = n / b;
             //remainder
             int r = n % b;
-            //run through method again
+            //keep dividing by the base
+            n = n / b;
+            //run through method again                
             convert(n, b);
-
             //If remainder is single digit sout number
             if (r < 10) {
                 System.out.print(r);
@@ -134,33 +133,32 @@ public class Assignment_2 {
                 //if r equals 10 print A, if r equals 11 print B etc...
                 if (r == 10) {
                     System.out.print("A");
-                } else {
-                    if (r == 11) {
-                        System.out.print("B");
-                    } else {
-                        if (r == 12) {
-                            System.out.print("C");
-                        } else {
-                            if (r == 13) {
-                                System.out.print("D");
-                            } else {
-                                if (r == 14) {
-                                    System.out.print("E");
-                                } else {
-                                    if (r == 15) {
-                                        System.out.print("F");
-                                    } else {
-                                        if (r == 16) {
-                                            System.out.print("G");
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                }
+                if (r == 11) {
+                    System.out.print("B");
+                }
+                if (r == 12) {
+                    System.out.print("C");
+                }
+                if (r == 13) {
+                    System.out.print("D");
+                }
+                if (r == 14) {
+                    System.out.print("E");
+                }
+                if (r == 15) {
+                    System.out.print("F");
+                }
+                if (r == 16) {
+                    System.out.print("G");
                 }
             }
         }
+    }
+
+    //---QUESTION 7---
+    public boolean isPalindrome(String s, int n) {
+        return false;
     }
 
     /**
@@ -202,8 +200,11 @@ public class Assignment_2 {
 
         //Question 6 TEST
         System.out.println("---QUESTION 6---");
-        System.out.println("Convert of 1000, base 8:");
-        test.convert(1000, 8);
+        System.out.println("Convert of 1000, base 16:");
+        test.convert(1000, 16);
         System.out.println("");
+
+        //Question 7 TEST
+        System.out.println("---QUESTION 7---");
     }
 }
