@@ -157,9 +157,18 @@ public class Assignment_2 {
     }
 
     //---QUESTION 7---
-    public boolean isPalindrome(String s, int n) {
-        return false;
-    }
+//    public boolean isPalindrome(String s, int n) {
+//        //first half of word
+//        int half = (n / 2) + 1;
+//        //last character in word
+//        int lastChar = n - 1;
+//        //if the first half of the word equals the second half of the word
+//        if (s.substring(0, half) == s.substring(half, lastChar)) {
+//            return true;
+//        } else {
+//            return false;
+//        }
+//    }
 
     /**
      * @param args the command line arguments
@@ -200,11 +209,13 @@ public class Assignment_2 {
 
         //Question 6 TEST
         System.out.println("---QUESTION 6---");
-        System.out.println("Convert of 1000, base 16:");
-        test.convert(1000, 16);
+        System.out.println("Convert of 1000, base 5:");
+        test.convert(1000, 5);
         System.out.println("");
 
-        //Question 7 TEST
-        System.out.println("---QUESTION 7---");
+//        //Question 7 TEST
+//        System.out.println("---QUESTION 7---");
+//        String tacocat = new String();
+//        test.isPalindrome(tacocat, 7);
     }
 }
