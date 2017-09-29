@@ -157,18 +157,24 @@ public class Assignment_2 {
     }
 
     //---QUESTION 7---
-//    public boolean isPalindrome(String s, int n) {
-//        //first half of word
-//        int half = (n / 2) + 1;
-//        //last character in word
-//        int lastChar = n - 1;
-//        //if the first half of the word equals the second half of the word
-//        if (s.substring(0, half) == s.substring(half, lastChar)) {
-//            return true;
-//        } else {
-//            return false;
-//        }
-//    }
+    public boolean isPalindrome(String s, int length) {
+        //base case
+        //if the word length is 0 or 1, return true
+        if (length == 0 || length == 1) {
+            return true;
+        } else {
+            //if the first and last characters are equal-- racecar
+            if (s.charAt(length - length) == s.charAt(length - 1)) {
+                //take out first and last characters-- aceca
+                s = s.substring(1, length);
+                //take out the two letters
+                length = length - 2;
+                //run method again
+                return isPalindrome(s, length);
+            }
+            return false;
+        }
+    }
 
     /**
      * @param args the command line arguments
@@ -214,8 +220,8 @@ public class Assignment_2 {
         System.out.println("");
 
 //        //Question 7 TEST
-//        System.out.println("---QUESTION 7---");
-//        String tacocat = new String();
-//        test.isPalindrome(tacocat, 7);
+        System.out.println("---QUESTION 7---");
+        boolean palindrome = test.isPalindrome("radar", 5);
+        System.out.println(palindrome);
     }
 }
